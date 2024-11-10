@@ -1,0 +1,66 @@
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+
+# Django-specific ignores
+db.sqlite3
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Ignore settings that may contain sensitive information
+*.env
+.env
+config.json
+
+# Django migrations
+*/migrations/__pycache__/
+*/migrations/*.py[cod]
+*/migrations/*.pyc
+*/migrations/*.pyo
+
+# Media and static files (if not managed externally)
+media/
+static/
+
+# Byte-compiled / optimized / DLL files
+*.egg-info/
+*.egg
+*.log
+
+# macOS system files
+.DS_Store
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Test output
+.tox/
+noxfile*
+*.coverage
+.cache
+
+# mypy
+.mypy_cache/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# JetBrains project files
+*.iml
+.idea/
