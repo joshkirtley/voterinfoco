@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block content%}
+
+{{quiz.quiz_title}}
+
+
+<form method="POST">
+  {{ formset.management_form }}
+  {%for question,form in mylist%}
+    {% csrf_token %}
+    <p>{{question.question_number}}. {{question.question}}</p>
+    {{form.as_p}}
+  {%endfor%}
+  <button type="submit">Create</button>
+</form>
+
+{%endblock%}

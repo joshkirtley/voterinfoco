@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<h1>{{quiz_title}}</h1>
+
+{%for question in quiz_questions%}
+<p>{{question.question_number}}. {{question.question}} <a href="{%url 'edit_question' question.id%}">Edit</a></p>
+<p>A. {{question.a}}</p>
+<p>B. {{question.b}}</p>
+<p>C. {{question.c}}</p>
+<p>D. {{question.d}}</p>
+{%endfor%}
+
+<h3>Next Question</h3>
+<form method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button type="submit">Create</button>
+</form>
+
+{%endblock%}

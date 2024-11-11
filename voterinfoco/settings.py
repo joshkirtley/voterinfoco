@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 with open(r'/Users/joshandrandi/Documents/secret_keys/voterinfosecrets.json') as f:
-    SECRET_KEY = json(f)['secret_key']
+    SECRET_KEY = json.load(f)['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'voterinfoapp'
 ]
 
 MIDDLEWARE = [

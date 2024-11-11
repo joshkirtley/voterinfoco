@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<a href="{% url 'view_quizzes' %}">View Quizzes</a>
+<a href="{% url 'create_quiz' %}">Create Quizzes</a>
+<a href="{% url 'view_quizzes_take'%}">Take Quizzes</a>
+
+    {%block content%}
+    {%endblock%}
+
+  </body>
+</html>

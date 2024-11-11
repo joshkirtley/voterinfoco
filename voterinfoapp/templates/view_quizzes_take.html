@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<br><br><br>
+{%for quiz in quizzes%}
+<a href="{% url 'take_quiz' quiz.id %}">{{quiz.quiz_title}}</a><br>
+{%endfor%}
+
+{%endblock%}
